@@ -5,10 +5,8 @@
 Create a new folder on your desktop or wherever you want. Let's call it `laser-cat`. While you're at it, create a subfolder and call it `js`.
 
 Open your favorite code editor and create two new files:
-* `index.html`
-* `sketch.js`
-
-Save them in the `js` subfolder you just created.
+* `index.html` -> save in your main project folder
+* `sketch.js`  -> save in the `js` subfolder you just created
 
 Write the basic layout of your html document in `index.html`. It should look like this:
 ```html
