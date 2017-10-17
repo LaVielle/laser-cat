@@ -188,7 +188,7 @@ for (var i = 0; i < eyes.length; i++){
 
 Of course, don't forget to link `eye.js` in the HTML file, after `p5.min.js` and before `sketch.js`:
 ```html
-<script src="js/p5.min.js" charset="utf-8"></script>
+<script src="js/eye.js" charset="utf-8"></script>
 ```
 
 Save all your files, kill your local server (ctrl + c) and restart it. You should now be able to place red dots where you click your mouse!
