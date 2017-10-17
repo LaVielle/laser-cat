@@ -194,5 +194,43 @@ Save all your files, kill your local server (ctrl + c) and restart it. You shoul
 
 ## 5. Drawing lasers
 
+Just like how you created an eye object, you will create a laser object. In your `js` subfolder, create and save a new file called `laser.js`. Type in:
+```JavaScript
+function laser(x, y){
+   this.oX = x; // the x origin point
+   this.oY = y; // the y origin point
+}
+```
 
+The laser too will need a `show()` method to be displayed:
+```JavaScript
+this.show = function(){
+   stroke(255, 0, 0); // Make the laserbean red
+   strokeWeight(5); // Make the laserbeam 5px thick
+   line(this.oX, this.oY, mouseX, mouseY); // Draw the laserbeam between the x/y origin point and the x/y position of the mouse
+}
+```
+
+Then, back to `sketch.js`. Declare a `lasers` array:
+```JavaScript
+var lasers = [];
+```
+In the `mousePressed()` function, add these two lines:
+```JavaScript
+lasers.push(new laser(mouseX, mouseY)); // Adding new laser object to the lasers array
+console.log("created laser"); // Log that a laser was created
+```
+In the `draw()` function, write another for loop:
+```JavaScript
+for (var i = 0; i < lasers.lenght; i++){
+   lasers[i].show(); // call the show() method for each i-th element in the lasers array
+}
+```
+
+Link `laser.js` in `index.html`:
+```html
+<script src="js/laser.js" charset="utf-8"></script>
+```
+
+Save all your files and restart your local server. Laser beams should now follow your mouse after you place eyes!
 <!--  -->
