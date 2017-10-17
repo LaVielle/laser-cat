@@ -1,8 +1,7 @@
 var catImg;
 
-// Declaring arrays that will contain eye and laser objects
+// Declaring array that will contain eye objects
 var eyes = [];
-var lasers = [];
 
 function setup(){
 	var canvas = createCanvas(640, 360);
