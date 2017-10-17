@@ -2,7 +2,7 @@
 
 The goal of this tutorial is to create an interactive laser cat sketch, pretty much with the same look as the following image:
 
-![Laser Cat](https://i.ytimg.com/vi/RvzzQCihJ3A/maxresdefault.jpg)
+![Laser Cat](https://github.com/LaVielle/laser-cat/blob/master/other-files/laser-cat.jpeg)
 
 
 ## 1. Getting started
@@ -233,4 +233,6 @@ Link `laser.js` in `index.html`:
 ```
 
 Save all your files and restart your local server. Laser beams should now follow your mouse after you place eyes!
+
+![Laser Cat](https://github.com/LaVielle/laser-cat/blob/master/other-files/laser-cat.gif)
 <!--  -->
