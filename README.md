@@ -1,6 +1,7 @@
 # laser-cat
 
 The goal of this tutorial is to create an interactive laser cat sketch, pretty much with the same look as the following image:
+
 ![Laser Cat]
 (https://i.ytimg.com/vi/RvzzQCihJ3A/maxresdefault.jpg)
 
