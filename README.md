@@ -171,13 +171,18 @@ First, declare an array where you'll store your eye objects. Do this before the 
 ```JavaScript
 var eyes = [];
 ```
-Secondly, use the `mousePressed()` function to create an eye and add it to the `eyes` array each time the mouse is pressed. write this function at the end of your code, below `draw()`:
+Secondly, write a `placePoint()` function to create an eye and add it to the `eyes` array each time the mouse is pressed -we cannot use the P5 `mousePressed()` function, which would let us place eyes outside of the canvas. Write this function at the end of your code, below `draw()`:
 ```JavaScript
-function mousePressed(){
+function placePoint(){
    eyes.push(new eye(mouseX, mouseY)); // Create a new element in the eyes array: new eye with mouseX/Y as x/y position
    console.log("created eye"); // Log that an eye was created.
 }
 ```
+You'll also need to call `placePoint()` in `setup()`:
+```JavaScript
+canvas.mousePressed(placePoint);
+```
+
 Thirdly, in the `draw()` function, you will loop through that `eyes` arrays and draw each object it contains.
 ```JavaScript
 for (var i = 0; i < eyes.length; i++){
@@ -215,7 +220,7 @@ Then, back to `sketch.js`. Declare a `lasers` array:
 ```JavaScript
 var lasers = [];
 ```
-In the `mousePressed()` function, add these two lines:
+In the `placePoint()` function, add these two lines:
 ```JavaScript
 lasers.push(new laser(mouseX, mouseY)); // Adding new laser object to the lasers array
 console.log("created laser"); // Log that a laser was created
@@ -235,4 +240,3 @@ Link `laser.js` in `index.html`:
 Save all your files and restart your local server. Laser beams should now follow your mouse after you place eyes!
 
 ![Laser Cat](https://github.com/LaVielle/laser-cat/blob/master/other-files/laser-cat.gif)
-<!--  -->
