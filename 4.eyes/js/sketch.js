@@ -5,6 +5,7 @@ var eyes = [];
 
 function setup(){
 	var canvas = createCanvas(640, 360);
+	canvas.mousePressed(placePoint);
 	background(0);
 
    catImg = loadImage('assets/cat.jpg');
@@ -21,7 +22,7 @@ function draw(){
 
 }
 
-function mousePressed(){
+function placePoint(){
    eyes.push(new eye(mouseX, mouseY)); // Create a new element in the eyes array: new eye with mouseX/Y as x/y position
    console.log("created eye"); // Log that an eye was created.
 }
