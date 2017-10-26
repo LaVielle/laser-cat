@@ -6,6 +6,7 @@ var lasers = [];
 
 function setup(){
 	var canvas = createCanvas(640, 360);
+	canvas.mousePressed(placePoint);
 	background(0);
 
    catImg = loadImage('assets/cat.jpg');
@@ -25,7 +26,7 @@ function draw(){
 
 }
 
-function mousePressed(){
+function placePoint(){
    eyes.push(new eye(mouseX, mouseY));
    console.log("created eye");
 	lasers.push(new laser(mouseX, mouseY)); // Adding new laser object to the lasers array
